@@ -87,6 +87,7 @@
 
 #include "llweb.h"
 #include "llsecondlifeurls.h"
+#include "llleapmotioncontroller.h"
 
 // Linden library includes
 #include "llavatarnamecache.h"
@@ -1094,6 +1095,8 @@ bool LLAppViewer::mainLoop()
 	LLViewerJoystick* joystick(LLViewerJoystick::getInstance());
 	joystick->setNeedsReset(true);
 
+        LLLeapMotionController	gestureController;
+
     LLEventPump& mainloop(LLEventPumps::instance().obtain("mainloop"));
     // As we do not (yet) send data on the mainloop LLEventPump that varies
     // with each frame, no need to instantiate a new LLSD event object each
@@ -1253,6 +1256,9 @@ bool LLAppViewer::mainLoop()
 				}
 
 			}
+
+                        // Run any LeapMotion devices
+ 			gestureController.stepFrame();
 
 			pingMainloopTimeout("Main:Sleep");
 			

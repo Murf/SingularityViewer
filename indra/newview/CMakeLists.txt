@@ -47,6 +47,7 @@ include(ViewerMiscLibs)
 include(GLOD)
 include(ViewerArtwork.cmake)
 include(LLAppearance)
+include(LEAPMOTION)
 
 if (WINDOWS)
     include(CopyWinLibs)
@@ -303,6 +304,7 @@ set(viewer_SOURCE_FILES
     llinventorypanel.cpp
     lljoystickbutton.cpp
     lllandmarklist.cpp
+    llleapmotioncontroller.cpp
     lllocalinventory.cpp
     lllogchat.cpp
     llloginhandler.cpp
@@ -803,6 +805,7 @@ set(viewer_HEADER_FILES
     llinventorypanel.h
     lljoystickbutton.h
     lllandmarklist.h
+    llleapmotioncontroller.h
     lllightconstants.h
     lllocalinventory.h
     lllogchat.h
@@ -1257,6 +1260,7 @@ if (WINDOWS)
         user32
         Vfw32
         winspool
+        Leap
         )
 
 	if(FMODEX)
@@ -1579,6 +1583,7 @@ target_link_libraries(${VIEWER_BINARY_NAME}
     ${HUNSPELL_LIBRARY}
     ${LLPHYSICSEXTENSIONS_LIBRARIES}
     ${LLAPPEARANCE_LIBRARIES}
+    ${LEAPMOTION_LIBRARY}
     )
 
 if (LINUX)

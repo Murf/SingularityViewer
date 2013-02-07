@@ -473,6 +473,8 @@ class DarwinManifest(ViewerManifest):
             # copy additional libs in <bundle>/Contents/MacOS/
             self.path("../../libraries/universal-darwin/lib/release/libndofdev.dylib", dst="Resources/libndofdev.dylib")
             self.path("../../libraries/universal-darwin/lib/release/libhunspell-1.3.0.dylib", dst="Resources/libhunspell-1.3.0.dylib")
+            #need to put leap motion lib here until we get a version that has path set correctly
+            self.path("../../libraries/universal-darwin/lib/release/libLeap.dylib", dst="MacOS/libLeap.dylib")
 
             # most everything goes in the Resources directory
             if self.prefix(src="", dst="Resources"):

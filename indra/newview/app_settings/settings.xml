@@ -12764,6 +12764,17 @@ This should be as low as possible, but too low may break functionality</string>
       <key>Value</key>
       <real>1.0</real>
     </map>
+  <key>LeapmotionTestMode</key>
+	<map>
+	  <key>Comment</key>
+	  <string>Test mode for Leapmotion gesture controller</string>
+	  <key>Persist</key>
+	  <integer>1</integer>
+	  <key>Type</key>
+	  <string>S32</string>
+	  <key>Value</key>
+	  <integer>0</integer>
+	</map>
   <key>MeshTriangleBudget</key>
   <map>
     <key>Comment</key>
