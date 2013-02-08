@@ -292,6 +292,15 @@ class WindowsManifest(ViewerManifest):
                 pass
             self.end_prefix()
 
+        # for Leapmotion
+	if self.prefix(src="../../libraries/i686-win32/lib/release", dst=""):
+            try:
+                self.path('Leap.dll')
+            except RuntimeError, err:
+                pass
+            self.end_prefix()
+
+
         # For google-perftools tcmalloc allocator.
         self.path("../../libraries/i686-win32/lib/release/libtcmalloc_minimal.dll", dst="libtcmalloc_minimal.dll")
 

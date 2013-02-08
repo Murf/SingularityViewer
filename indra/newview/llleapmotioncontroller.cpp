@@ -34,11 +34,9 @@
 	*	The Leap Motion SDK should be copied to the same folder as the root of the 
 		Second Life viewer source code, otherwise the #include line below will fail.
 
-	*	Copy Leap.lib from Leap_SDK\lib\x86 into the build-vc100\packages\lib\release directory, otherwise you 
-		will get linker errors not finding leap.lib.
-	
-	*   Copy Leap.dll from Leap_SDK\lib\x86 into the build-vc100\newview\RelWithDebInfo directory, otherwise 
-		secondlife-bin.exe will not run
+    *   For OSX: cope libLeap.dylib from Leap_DSK/lib to libraries/universal-darwin/lib/release
+
+	*	For WIN: Copy Leap.lib and Leap.dll from Leap_SDK\lib\x86 into the libraries\i686-win32\lib\release directory and
 
 	This code uses the value of "LeapmotionTestMode" from \indra\newview\app_settings to determine how
 	it functions.   You can change this under the Advanced menu, Show Debug Settings.  Enter or find 
@@ -73,7 +71,7 @@
 
 // The Leapmotion SDK should be copied to the same folder as the root of
 // the Second Life viewer source code.  Otherwise you must modify this line to find Leap.h
-#include "../../../../../Leap_SDK/include/Leap.h"
+#include "../../../../Leap_SDK/include/Leap.h"
 
 
 
@@ -485,7 +483,7 @@ void LLLMImpl::modeMoveAndCamTest1(Leap::HandList & hands)
 		F32 orbit_rate = 0.f;
 
 		Leap::Vector pos(0, 0, 0);
-		for (size_t i = 0; i < num_fingers; ++i) 
+		for (S32 i = 0; i < num_fingers; ++i) 
 		{
 			Leap::Finger finger = finger_list[i];
 			pos += finger.tipPosition();
@@ -585,7 +583,7 @@ void LLLMImpl::modeDumpDebugInfo(Leap::HandList & hands)
 		{	// Calculate the hand's average finger tip position
 			Leap::Vector pos(0, 0, 0);
 			Leap::Vector direction(0, 0, 0);
-			for (size_t i = 0; i < num_fingers; ++i) 
+			for (S32 i = 0; i < num_fingers; ++i) 
 			{
 				Leap::Finger finger = finger_list[i];
 				pos += finger.tipPosition();
