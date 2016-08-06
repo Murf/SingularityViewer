@@ -716,7 +716,7 @@
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>https://depot.alchemyviewer.org/pub/windows64/lib/fmodstudio-1.08.04-windows64-201605291157.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows64/lib/fmodstudio-1.08.04-windows64-201605291157.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows64</string>
