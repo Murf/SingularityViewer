@@ -1,0 +1,11 @@
+version: 1.8.6
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+build_script:
+- cmd: >-
+    pip install "hg+https://bitbucket.org/alchemyviewer/autobuild-alchemy"
+    autobuild configure -cRelease -pwindows64 -- -DFMODSTUDIO:BOOL=ON -DPACKAGE:BOOL=ON
