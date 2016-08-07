@@ -50,7 +50,7 @@ install:
 build_script:
   # Build the compiled extension
   - pip install "hg+https://bitbucket.org/alchemyviewer/autobuild-alchemy"
-#  - autobuild configure -cRelease -pwindows64 -- -DFMODSTUDIO:BOOL=ON -DPACKAGE:BOOL=ON
+  - autobuild configure -cRelease -pwindows64 -- -DFMODSTUDIO:BOOL=ON -DPACKAGE:BOOL=ON
   - msbuild.exe build-vc140-x86_64\Singularity.sln
 
 artifacts:
