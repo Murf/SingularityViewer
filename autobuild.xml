@@ -688,7 +688,7 @@
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>https://depot.alchemyviewer.org/pub/linux64/lib/fmodstudio-1.08.04-linux64-201605301500.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/linux64/lib/fmodstudio-1.08.04-linux64-201605301500.tar.bz2</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -702,7 +702,7 @@
               <key>hash_algorithm</key>
               <string>md5</string>
               <key>url</key>
-              <string>https://depot.alchemyviewer.org/pub/windows/lib/fmodstudio-1.08.04-windows-201605291158.tar.bz2</string>
+              <string>http://depot.alchemyviewer.org/pub/windows/lib/fmodstudio-1.08.04-windows-201605291158.tar.bz2</string>
             </map>
             <key>name</key>
             <string>windows</string>
