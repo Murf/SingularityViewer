@@ -116,7 +116,7 @@ install:
 
 build_script:
   # Build the compiled extension
-  - "%CMD_IN_ENV% pip install "hg+https://bitbucket.org/alchemyviewer/autobuild-alchemy"
+  - "%CMD_IN_ENV% pip install foo
   - "%CMD_IN_ENV% autobuild configure -cRelease -pwindows -- -DFMODSTUDIO:BOOL=ON -DPACKAGE:BOOL=ON
 
 artifacts:
