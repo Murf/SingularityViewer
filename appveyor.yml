@@ -55,4 +55,4 @@ build_script:
 
 artifacts:
   # Archive the generated packages in the ci.appveyor.com build report.
-  - path: dist\*
+  - path: build-vc140-x86_64\newview\Release\*.exe 
