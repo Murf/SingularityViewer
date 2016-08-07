@@ -7,5 +7,6 @@ assembly_info:
   assembly_informational_version: '{version}'
 build_script:
 - cmd: >-
+    python test
     pip install "hg+https://bitbucket.org/alchemyviewer/autobuild-alchemy"
     autobuild configure -cRelease -pwindows64 -- -DFMODSTUDIO:BOOL=ON -DPACKAGE:BOOL=ON
